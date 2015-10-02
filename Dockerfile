@@ -3,7 +3,7 @@ MAINTAINER Victor Lowther <victor@rackn.com>
 
 ENV GOPATH /go
 
-RUN apt-get install -y iptables ntp ntpdate && \
+RUN apt-get install -y iptables ntp ntpdate isc-dhcp-relay && \
   /usr/local/go/bin/go get -u github.com/digitalrebar/forwarder && \
   cp -r $GOPATH/bin/forwarder /usr/local/bin
 
